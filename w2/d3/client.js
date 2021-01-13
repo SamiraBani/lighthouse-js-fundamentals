@@ -10,7 +10,8 @@ const connect = function() {
   });
   conn.on('connect', () => {console.log('connection established successfully')});
   conn.name = "Name : SNK";
-  // interpret incoming data as text
+//   conn.on('data' , message => "Move: up");
+//  interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.on('data', message => {console.log("you ded cuz you idled!")});
   return conn;
